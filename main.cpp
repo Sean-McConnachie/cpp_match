@@ -1,9 +1,3 @@
-# cpp_match
-Bringing a little bit of Rust to C++
-
-I suffered from a missing `break;` today... This is my solution. 
-
-```c++
 #include <iostream>
 #include <functional>
 #include <random>
@@ -25,6 +19,17 @@ F match(const s_MatchCase<F> (&match_case)[N]) {
         }
     }
 }
-```
 
-I'll benchmark and check for optimizations some other time.
+int main() {
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    int x = std::uniform_int_distribution<>(0, 3)(gen);
+    std::cout << "X: " << x << std::endl;
+
+    auto r = match<int>({{CASE(x < 1),   []() { return 0; }},
+                         {CASE(x == 1),  []() { return 1; }},
+                         {CASE(DEFAULT), []() { return 999; }}});
+    std::cout << "M: " << r << std::endl;
+
+    return 0;
+}
