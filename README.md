@@ -7,9 +7,9 @@ Bringing a little bit of Rust to C++.
 Recently, I experienced a few stupid bugs in my code that could have been avoided if I had used Rust instead of C++.
 These bugs were caused by the fact that I'm not a perfect programmer and I make mistakes. 🐛s:
 
-- [match]("https://doc.rust-lang.org/rust-by-example/flow_control/match.html") Falling through a switch statement and
+- [match](https://doc.rust-lang.org/rust-by-example/flow_control/match.html) Falling through a switch statement and
   using `MJPG` for 3 weeks instead of `H264`.
-- [derive]("https://doc.rust-lang.org/reference/attributes/derive.html") Forgetting to update fields in json
+- [derive](https://doc.rust-lang.org/reference/attributes/derive.html) Forgetting to update fields in json
   configuration structs (there are two functions and one field that must be modified).
 
 ## Table of Contents
@@ -25,9 +25,9 @@ These bugs were caused by the fact that I'm not a perfect programmer and I make 
 
 ## Info
 
-For generating code, this project uses the [Metalang99 Preprocessor]("https://github.com/Hirrolot/metalang99").
+For generating code, this project uses the [Metalang99 Preprocessor](https://github.com/Hirrolot/metalang99).
 
-As most of my projects use the [nlohmann::json]("https://github.com/nlohmann/json") library, this is what
+As most of my projects use the [nlohmann::json](https://github.com/nlohmann/json) library, this is what
 the `JSON_STRUCT` macro is designed for.
 
 ## Install
