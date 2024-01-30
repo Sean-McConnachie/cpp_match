@@ -21,6 +21,7 @@ These bugs were caused by the fact that I'm not a perfect programmer and I make 
     - [MATCH_TO](#match_to)
     - [JSON_STRUCT](#json_struct)
 - [Seeing the output](#seeing-the-output-using-cmake)
+- [TODO](#todo)
 
 ## Info
 
@@ -133,3 +134,9 @@ cmake ..
 make main.cpp.i && mv CMakeFiles/<PROJECT>.dir/main.cpp.o main.cpp.i
 # You can find the relevant functions at the bottom of this massive file.
 ```
+
+## TODO
+
+- [ ] Rewrite `MATCH` and `MATCH_TO` to not use `ML99_list`s.
+- [ ] Add tests.
+- [ ] Make tool that outputs only required part of the preprocessor output.
