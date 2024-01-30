@@ -1,7 +1,15 @@
 #ifndef JSON_STRUCT_H
 #define JSON_STRUCT_H
 
-#include "nlohmann/json.hpp"
+#include <metalang99.h>
+
+#ifdef v // Should always be true since we just included ML99
+#undef v
+#endif // v
+
+#include <nlohmann/json.hpp>
+
+#define v(...) (0v, __VA_ARGS__)
 
 using json = nlohmann::json;
 

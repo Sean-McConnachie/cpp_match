@@ -3,15 +3,15 @@ project(smh LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 11)
 
-if (CMAKE_VERSION VERSION_GREATER_EQUAL "3.24.0")
-    cmake_policy(SET CMP0135 NEW)
-endif ()
-
 add_library(${PROJECT_NAME} INTERFACE)
 
 target_include_directories(${PROJECT_NAME} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 # METALANG99 ==========================================================================================================
+if (CMAKE_VERSION VERSION_GREATER_EQUAL "3.24.0")
+    cmake_policy(SET CMP0135 NEW)
+endif ()
+
 include(FetchContent)
 FetchContent_Declare(
         metalang99

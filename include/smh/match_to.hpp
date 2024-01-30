@@ -1,6 +1,8 @@
 #ifndef MATCH_TO_H
 #define MATCH_TO_H
 
+#include <metalang99.h>
+
 #ifndef DEFAULT
 #define DEFAULT true
 #endif // DEFAULT
