@@ -128,7 +128,7 @@ assert(x == 0 | x == 1 | x == 2);
 
 Generates:
 ```c++
-auto r = [&]() { if (x == 0) {return 0.0;} if (x == 1) {return 1.0;} if (x == 2) {return 2.0;} if (x == 3) {return 3.0;} std::cerr << "Error: Missing return statement!\n" << std::endl; exit(1); }();
+auto r = [&]() { if (x == 0) {return 0.0;} if (x == 1) {return 1.0;} if (x == 2) {return 2.0;} if (x == 3) {{ x--; return 3.0; }} std::cerr << "Error: Missing return statement!\n" << std::endl; exit(1); }();
 ```
 
 #### Seeing the output (using cmake)
