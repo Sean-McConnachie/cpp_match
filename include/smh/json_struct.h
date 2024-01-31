@@ -30,6 +30,4 @@ inline void to_json(json &j, const name &s) {                                   
     };                                                                                                                 \
 }
 
-#include "../metalang99undef.h"
-
 #endif //SMH_JSON_STRUCT_H

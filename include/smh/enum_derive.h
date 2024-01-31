@@ -32,6 +32,4 @@ inline name from_str(const std::string &s) {                                    
     ENUM_INVALID_VARIANT(v(s))                                                          \
 }
 
-#include "../metalang99undef.h"
-
 #endif // SMH_ENUM_DERIVE_H

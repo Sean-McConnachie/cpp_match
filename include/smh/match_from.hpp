@@ -22,6 +22,4 @@
     MATCH_FROM_MISSING_RETURN                                                                                            \
 }();
 
-#include "../metalang99undef.h"
-
 #endif // SMH_MATCH_FROM_H
