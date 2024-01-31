@@ -19,7 +19,7 @@
 enum class name {                                                                       \
     ML99_EVAL(ML99_variadicsForEach(v(ENUM_VARIANT), v(args)))                          \
 };                                                                                      \
-inline std::string to_str(name e) {                                                     \
+inline std::string to_str(const name e) {                                               \
     switch (e) {                                                                        \
         ML99_EVAL(ML99_variadicsForEach(ML99_appl(v(ENUM_SWITCH), v(name)), v(args)))   \
         default: return "";                                                             \
