@@ -1,5 +1,5 @@
-#ifndef JSON_STRUCT_H
-#define JSON_STRUCT_H
+#ifndef SMH_JSON_STRUCT_H
+#define SMH_JSON_STRUCT_H
 
 #include <metalang99.h>
 
@@ -33,4 +33,4 @@ inline void to_json(json &j, const name &s) {                                   
     };                                                                                                                 \
 }
 
-#endif //JSON_STRUCT_H
+#endif //SMH_JSON_STRUCT_H

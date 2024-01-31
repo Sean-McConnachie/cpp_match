@@ -1,5 +1,5 @@
-#ifndef MATCH_H
-#define MATCH_H
+#ifndef SMH_MATCH_H
+#define SMH_MATCH_H
 
 #include <metalang99.h>
 
@@ -18,4 +18,4 @@
 
 #define MATCH(args...) ML99_LIST_EVAL(ML99_listMapI(v(MATCH_CASE), ML99_listFromTuples(v(MATCH_STATEMENT), v(args))))
 
-#endif // MATCH_H
+#endif // SMH_MATCH_H
