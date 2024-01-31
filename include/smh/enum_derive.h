@@ -1,6 +1,8 @@
 #ifndef SMH_ENUM_DERIVE_H
 #define SMH_ENUM_DERIVE_H
 
+#include <metalang99.h>
+
 #define ENUM_VARIANT_IMPL(variant) v(variant,)
 #define ENUM_VARIANT_ARITY 1
 
@@ -29,5 +31,7 @@ inline name from_str(const std::string &s) {                                    
     ML99_EVAL(ML99_variadicsForEach(ML99_appl2(v(ENUM_IF), v(s), v(name)), v(args)))    \
     ENUM_INVALID_VARIANT(v(s))                                                          \
 }
+
+#include "../metalang99undef.h"
 
 #endif // SMH_ENUM_DERIVE_H

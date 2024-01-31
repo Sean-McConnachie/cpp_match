@@ -1,13 +1,10 @@
 #ifndef SMH_JSON_STRUCT_H
 #define SMH_JSON_STRUCT_H
 
+
+#include "../metalang99undef.h"
+#include <nlohmann/json.hpp> // There is a conflicting variable-macro `v`
 #include <metalang99.h>
-
-#ifdef v // Should always be true since we just included ML99
-#undef v
-#endif // v
-
-#include <nlohmann/json.hpp>
 
 #define v(...) (0v, __VA_ARGS__)
 
@@ -32,5 +29,7 @@ inline void to_json(json &j, const name &s) {                                   
         ML99_EVAL(ML99_variadicsForEach(ML99_appl(v(JSON_STRUCT_UNWRAP_CALL), v(JSON_STRUCT_TO_JSON)), v(args)))       \
     };                                                                                                                 \
 }
+
+#include "../metalang99undef.h"
 
 #endif //SMH_JSON_STRUCT_H
